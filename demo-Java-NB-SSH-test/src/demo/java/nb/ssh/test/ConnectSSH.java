@@ -21,7 +21,7 @@ public class ConnectSSH {
     //  String pass = connstr.substring(connstr.indexOf(':')+1, connstr.indexOf('@'));
     //  String host = connstr.substring(connstr.indexOf('@') + 1);
       Session session = jsch.getSession("root", "192.168.254.32", 8022);    
-      session.setPassword("10Password1024");
+      session.setPassword("pass");
       session.setConfig("StrictHostKeyChecking", "no");
       session.connect();
       Channel channel = session.openChannel("shell");
